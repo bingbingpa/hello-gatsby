@@ -1,13 +1,12 @@
 import React, { FunctionComponent, useMemo } from 'react';
 import styled from '@emotion/styled';
-import GlobalStyle from 'components/common/globalStyle';
 import Introduction from 'components/main/introduction';
-import Footer from 'components/common/footer';
 import CategoryList, { CategoryListProps } from 'components/main/categoryList';
 import PostList, { PostType } from 'components/main/postList';
 import { graphql } from 'gatsby';
 import { ProfileImageProps } from 'components/main/profileImage';
 import queryString, { ParsedQuery } from 'query-string';
+import Template from 'components/common/template';
 
 interface IndexPageProps {
   location: {
@@ -25,21 +24,15 @@ interface IndexPageProps {
   };
 }
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-`;
-
-const IndexPage: FunctionComponent<IndexPageProps> = function ({
-                                                                 location: { search },
-                                                                 data: {
-                                                                   allMarkdownRemark: { edges },
-                                                                   file: {
-                                                                     childImageSharp: { fluid },
-                                                                   },
-                                                                 },
-                                                               }) {
+const IndexPage: FunctionComponent<IndexPageProps> = function({
+                                                                location: { search },
+                                                                data: {
+                                                                  allMarkdownRemark: { edges },
+                                                                  file: {
+                                                                    childImageSharp: { fluid },
+                                                                  },
+                                                                },
+                                                              }) {
   const parsed: ParsedQuery = queryString.parse(search);
   const selectedCategory: string =
     typeof parsed.category !== 'string' || !parsed.category
@@ -72,16 +65,14 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
   );
 
   return (
-    <Container>
-      <GlobalStyle />
+    <Template>
       <Introduction profileImage={fluid} />
       <CategoryList
         selectedCategory={selectedCategory}
         categoryList={categoryList}
       />
       <PostList selectedCategory={selectedCategory} posts={edges} />
-      <Footer />
-    </Container>
+    </Template>
   );
 };
 
