@@ -12,17 +12,21 @@ const useInfiniteScroll = function (
   selectedCategory: string,
   posts: PostType[],
 ): useInfiniteScrollType {
-  const containerRef: MutableRefObject<HTMLDivElement | null> = useRef<HTMLDivElement>(
-    null,
-  );
+  const containerRef: MutableRefObject<HTMLDivElement | null> =
+    useRef<HTMLDivElement>(null);
   const [count, setCount] = useState<number>(1);
 
   const postListByCategory = useMemo<PostType[]>(
     () =>
-      posts.filter(({ node: { frontmatter: { categories } } }: PostType) =>
-        selectedCategory !== 'All'
-          ? categories.includes(selectedCategory)
-          : true,
+      posts.filter(
+        ({
+          node: {
+            frontmatter: { categories },
+          },
+        }: PostType) =>
+          selectedCategory !== 'All'
+            ? categories.includes(selectedCategory)
+            : true,
       ),
     [selectedCategory],
   );

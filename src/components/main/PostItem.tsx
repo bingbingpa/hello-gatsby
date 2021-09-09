@@ -92,15 +92,15 @@ const Summary = styled.div`
 `;
 
 const PostItem: FunctionComponent<PostItemProps> = function ({
-                                                               title,
-                                                               date,
-                                                               categories,
-                                                               summary,
-                                                               thumbnail: {
-                                                                 childImageSharp: { fluid },
-                                                               },
-                                                               link,
-                                                             }) {
+  title,
+  date,
+  categories,
+  summary,
+  thumbnail: {
+    childImageSharp: { fluid },
+  },
+  link,
+}) {
   return (
     <PostItemWrapper to={link}>
       <ThumbnailImage fluid={fluid} alt="Post Item Image" />

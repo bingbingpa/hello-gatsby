@@ -51,9 +51,9 @@ const CategoryItem = styled(({ active, to, ...props }: GatsbyLinkProps) => (
 `;
 
 const CategoryList: FunctionComponent<CategoryListProps> = function ({
-                                                                       selectedCategory,
-                                                                       categoryList,
-                                                                     }) {
+  selectedCategory,
+  categoryList,
+}) {
   return (
     <CategoryListWrapper>
       {Object.entries(categoryList).map(([name, count]) => (
@@ -68,6 +68,5 @@ const CategoryList: FunctionComponent<CategoryListProps> = function ({
     </CategoryListWrapper>
   );
 };
-
 
 export default CategoryList;

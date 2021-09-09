@@ -21,10 +21,10 @@ interface PostTemplateProps {
 }
 
 const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
-                                                                       data: {
-                                                                         allMarkdownRemark: { edges },
-                                                                       },
-                                                                     }) {
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) {
   const {
     node: { html, frontmatter },
   } = edges[0];

@@ -19,8 +19,8 @@ const ProfileImageWrapper = styled(Img)`
 `;
 
 const ProfileImage: FunctionComponent<ProfileImageProps> = function ({
-                                                                       profileImage,
-                                                                     }) {
+  profileImage,
+}) {
   return <ProfileImageWrapper fluid={profileImage} alt="Profile Image" />;
 };
 

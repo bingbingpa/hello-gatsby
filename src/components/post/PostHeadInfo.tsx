@@ -77,10 +77,10 @@ const PostData = styled.div`
 `;
 
 const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = function ({
-                                                                       title,
-                                                                       date,
-                                                                       categories,
-                                                                     }) {
+  title,
+  date,
+  categories,
+}) {
   const goBackPage = () => window.history.back();
 
   return (

@@ -43,8 +43,8 @@ const Title = styled.div`
 `;
 
 const Introduction: FunctionComponent<IntroductionProps> = function ({
-                                                                       profileImage,
-                                                                     }) {
+  profileImage,
+}) {
   return (
     <Background>
       <Wrapper>
