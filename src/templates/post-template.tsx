@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { graphql } from 'gatsby';
-import Template from 'components/common/template';
-import PostHead, { PostHeadProps } from 'components/post/postHead';
+import Template from 'components/common/Template';
+import PostHead, { PostHeadProps } from 'components/post/PostHead';
 import PostContent from 'components/post/PostContent';
 import CommentWidget from 'components/post/CommentWidget';
 

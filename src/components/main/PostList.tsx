@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
-import PostItem from 'components/main/postItem';
+import PostItem from 'components/main/PostItem';
 import { FluidObject } from 'gatsby-image';
-import useInfiniteScroll, { useInfiniteScrollType} from 'hooks/useInfiniteScroll';
+import useInfiniteScroll, { useInfiniteScrollType} from 'hooks/UseInfiniteScroll';
 
 
 export type PostType = {

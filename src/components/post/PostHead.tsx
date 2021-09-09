@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 import Img, { FluidObject } from 'gatsby-image';
-import PostHeadInfo from 'components/post/postHeadInfo';
+import PostHeadInfo from 'components/post/PostHeadInfo';
 
 type GatsbyImgProps = {
   fluid: FluidObject;

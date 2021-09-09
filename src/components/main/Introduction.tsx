@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
-import ProfileImage, { ProfileImageProps } from 'components/main/profileImage';
+import ProfileImage, { ProfileImageProps } from 'components/main/ProfileImage';
 
 type IntroductionProps = ProfileImageProps;
 

@@ -1,12 +1,12 @@
 import React, { FunctionComponent, useMemo } from 'react';
 import styled from '@emotion/styled';
-import Introduction from 'components/main/introduction';
-import CategoryList, { CategoryListProps } from 'components/main/categoryList';
-import PostList, { PostType } from 'components/main/postList';
+import Introduction from 'components/main/Introduction';
+import CategoryList, { CategoryListProps } from 'components/main/CategoryList';
+import PostList, { PostType } from 'components/main/PostList';
 import { graphql } from 'gatsby';
-import { ProfileImageProps } from 'components/main/profileImage';
+import { ProfileImageProps } from 'components/main/ProfileImage';
 import queryString, { ParsedQuery } from 'query-string';
-import Template from 'components/common/template';
+import Template from 'components/common/Template';
 
 interface IndexPageProps {
   location: {

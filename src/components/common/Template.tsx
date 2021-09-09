@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 import styled from '@emotion/styled';
-import GlobalStyle from 'components/common/globalStyle';
-import Footer from 'components/common/footer';
+import GlobalStyle from 'components/common/GlobalStyle';
+import Footer from 'components/common/Footer';
 
 interface TemplateProps {
   children: ReactNode;
